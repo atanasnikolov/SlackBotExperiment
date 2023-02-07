@@ -17,7 +17,7 @@ if __name__ == "__main__":
     result = client.conversations_create(name=channel_name)
 
     channel_id1 = result["channel"]["id"]
-    #since I have no money (thank you for the promotion btw) I am using users since groups are for the paid version 
+    #using users since groups are for the paid version 
     response = client.conversations_invite(channel=channel_id1, users=["U04K643Q8UF", "U04LA6EA1GS"])
     add_topic = client.conversations_setTopic(channel=channel_id1, topic="This is the Topic of the channel")
     add_bookmark = client.bookmarks_add(channel_id=channel_id1, title="tubata", type="link", link="insert link here")
